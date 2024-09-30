@@ -1,23 +1,35 @@
-<!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Perpustakaan Universitas Andalas</title>
-    <!-- css link -->
-    <link rel="stylesheet"> <a href="style.css"></a></link>
+<html lang="en"></html>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Universitas Katolik Santo Thomas
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="teks.css"
 </head>
-
-<body>
-<style>
-    body {
-    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/008/617/161/small/abstract-gradient-pastel-blue-and-purple-background-neon-pastel-color-template-for-website-or-presentation-free-free-vector.jpg");
+ <style>
+       body {
+    background-image: url("https://st4.depositphotos.com/1022597/22670/i/450/depositphotos_226702720-stock-photo-brown-paper-texture-useful-background.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-attachment: fixed;
     }
-
-ul {
+    .form-container {
+            width: 1000px;
+            margin: 500px auto;
+            padding: 20px;
+            border: 2px solid black;
+            background-color: rgb(247, 135, 8);
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -50,7 +62,7 @@ li.dropdown {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(255, 27, 27, 0.897);
   z-index: 1;
 }
 
@@ -67,103 +79,86 @@ li.dropdown {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-</style>
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container input[type="tel"],
+        .form-container input[type="date"],
+        .form-container select {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid black;
+        }
+        .form-container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: white;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+    </style>
+ <body class="font-sans">
+  <header class="bg-red-700 text-white">
+   <div class="container mx-auto flex justify-between items-center py-4">
+    <div class="flex items-center">
+     <img alt="University Logo" class="mr-3" height="50" src="https://upload.wikimedia.org/wikipedia/id/b/b7/Logo_UNIKA.png" width="50"/>
+     <span class="text-xl font-bold">
+      UNIVERSITAS KATOLIK SANTO THOMAS
+     </span>
+    </div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="modul1.html">Tentang Kami</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">Layanan</a>
+          <div class="dropdown-content">
+            <a href="perpanjangan.html">Perpanjangan Peminjaman Buku</a>
+            <a href="pemesanan.html">Pemesanan Buku</a>
+            <a href="tabelbuku.html">Tabel Bahan Buku</a>
+            <a href="#">Sirkulasi</a>
+          </div> </li>
+           <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">Daftar Anggota</a>
+          <div class="dropdown-content">
+            <a href="daftaranggota.html">Daftar Online</a>
+            <a href="login.html">Login</a>
+          </div></li>
+          <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">Tugas Web</a>
+          <div class="dropdown-content">
+            <a href="modul1.html">Modul 1</a>
+            <a href="modul2.html">Modul 2</a>
+            <a href="modul3.html">Modul 3</a>
+            <a href="modul4.html">Modul 4</a>
+            <a href="modul5.html">Modul 5</a>
+            <a href="modul6.html">Modul 6</a>
+            <a href="modul7.html">Modul 7</a>
+            <a href="modul8.html">Modul 8</a>
+          </div></li>
+      </ul>
+  </header>
+ </body>
 
-<ul>
-  <li><a href="https://ridasurbaktilib.github.io/index.html">Home</a></li>
-  <li><a href="https://pustaka.unand.ac.id//">Tentang Kami</a></li>
+<head>
   <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn">Layanan</a>
-    <div class="dropdown-content">
-      <a href="perpanjangan.html">Perpanjangan Peminjaman Buku</a>
-      <a href="pemesanan.html">Pemesanan Buku</a>
-      <a href="tabelbuku.html">Tabel Bahan Buku</a>
-      <a href="#">Sirkulasi</a>
-    </div> </li>
-     <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn">Daftar Anggota</a>
-    <div class="dropdown-content">
-      <a href="https://rida.humandigilib.xyz/index.php?p=daftar_online">Daftar Online</a>
-      <a href="https://rida.humandigilib.xyz/index.php?p=member&sec=title_basket">Login</a>
-    </div></li>
-    <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn">Tugas Web</a>
-    <div class="dropdown-content">
-      <a href="modul1.html">Modul 1</a>
-      <a href="modul2.html">Modul 2</a>
-      <a href="modul3.html">Modul 3</a>
-      <a href="modul4.html">Modul 4</a>
-      <a href="modul5.html">Modul 5</a>
-      <a href="modul6.html">Modul 6</a>
-      <a href="modul7.html">Modul 7</a>
-      <a href="modul8.html">Modul 8</a>
-    </div></li>
-</ul>
-<!DOCTYPE html>
-<html lang="en">
-    <title>Contoh Inline CSS</title>
-<body>
-    <h1 style="color: gold; font-family: Times New Roman;">Ini adalah judul dengan inline style</h1>
-    <p style="color: green; font-size: 17px;">Ini adalah paragraph dengan inline styles.</p>
-</body>
-
-</html>
-
-<html lang="en">
-<head>
-    <title>Contoh Internal CSS</title>
-    <style>
-        h1 {
-            color: gold;
-            font-family: Times New Roman,
-        }
-
-        p {
-            color: green;
-            font-size: 16px;
-        }
-
-    </style>
+ <div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+    <a href="#">Selamat Datang di Website Perpustakaan 
+      SUKA BACA</a>
+    <a href="#">Class Table</a>
+    <a href="#">Form & Button</a>
+  </div></div></head></li>
+</div>
 </head>
 <body>
-    <h1>Ini adalah judul dengan internal style</h1>
-    <p>Ini adalah paragraph dengan internal style.</p>
-</body>
-</html>
 
-<html lang="en">
-<head>
-    
-    <title>Contoh Eksternal CSS</title>
-    <link rel="stylesheet" href="styles.css">
-	<style>
-		h1 {
-			color: gold;
-			font-family: Times New Roman,
-		}
-
-		p {
-			color: green;
-			font-size: 16px;
-		}
-	
-    </style>
-</head>
-<body>
-    <h1>Ini adalah judul dengan eksternal style</h1>
-    <p>Ini adalah paragraph dengan external style.</p>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Pengertian HTML dan CSS</title>
-</head>
-<body>
-	<h1> Pengertian HTML dan CSS </h1>
-    <p>HTML adalah bahasa markup standar yang digunakan untuk membuat struktur dan konten halaman web. Dalam HTML, pengembang web mendefinisikan elemen-elemen seperti teks, gambar, tautan, formulir, dan elemen lainnya yang membentuk tampilan halaman web. HTML menggunakan tag-tag untuk menandai elemen-elemen ini sehingga peramban web tahu cara menampilkan mereka.</p>
-
-    <p>CSS adalah bahasa stylesheet yang digunakan untuk mengontrol tata letak dan tampilan halaman web. Dengan CSS, Anda dapat mengatur warna, ukuran, spasi, jenis font, dan banyak properti tata letak lainnya untuk elemen-elemen HTML. Penggunaan CSS memungkinkan pemisahan antara struktur dan tata letak, sehingga HTML dapat fokus pada struktur konten, sementara CSS mengontrol cara konten tersebut ditampilkan.</p>
-</body>
+</p>
+  <footer class="fixed bottom-4 right-4">
+   <a class="bg-red-700 text-white p-3 rounded-full shadow-lg hover:bg-red-800" href="#">
+    <i class="fas fa-arrow-up">
+    </i>
+   </a>
+  </footer>
+ </body>
 </html>
