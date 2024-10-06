@@ -8,7 +8,8 @@
   <script src="https://cdn.tailwindcss.com">
   </script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
- </head>
+  <link rel="stylesheet" href="teks.css"
+</head>
  <style>
        body {
     background-image: url("https://st4.depositphotos.com/1022597/22670/i/450/depositphotos_226702720-stock-photo-brown-paper-texture-useful-background.jpg");
@@ -17,7 +18,7 @@
     background-attachment: fixed;
     }
     .form-container {
-            width: 800px;
+            width: 1000px;
             margin: 500px auto;
             padding: 20px;
             border: 2px solid black;
@@ -137,198 +138,34 @@ li.dropdown {
       </ul>
   </header>
  </body>
-  <div class="form-container">
-    <form>
-        <p style="margin-bottom: 50px"></p>
-        <caption>FORMULIR ANGGOTA PERPUSTAKAAN PROGRAM STUDI PERPUSTAKAAN DAN SAINS INFORMASI</caption>
-
-        <label for="nama">Nama:</label>
-        <input type="text" id="nama" name="nama">
-        
-        <label for="nim">NIM:</label>
-        <input type="text" id="nim" name="nim">
-        
-        <label for="alamat">Alamat:</label>
-        <input type="text" id="alamat" name="alamat">
-        
-        <label for="jenis_kelamin">Jenis Kelamin:</label>
-        <td><label><input type="radio" name="jenis_kelamin" value="laki-laki"> Laki-laki</label>
-            <label><input type="radio" name="jenis_kelamin" value="perempuan"> Perempuan</label></td>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email">
-        
-        <label for="no_hp">No HP:</label>
-        <input type="tel" id="no_hp" name="no_hp">
-        
-        <label for="tempat_lahir">Tempat Lahir:</label>
-        <input type="text" id="tempat_lahir" name="tempat_lahir">
-        
-        <label for="tanggal_lahir">Tanggal Lahir:</label>
-        <input type="date" id="tanggal_lahir" name="tanggal_lahir">
-        
-        <input type="submit" value="REGISTER">
+ <div class="form-container">
+    <p style="margin-bottom: 50px">
     
-        <div class="mt-8">
-            <h2 class="text-center font-bold">Tabel Bahan Buku</h2>
-            <table class="w-full border border-black mt-4">
-                <thead>
-                    <tr class="bg-yellow-300">
-                        <th class="border border-black px-2 py-1">No.</th>
-                        <th class="border border-black px-2 py-1">Judul Buku</th>
-                        <th class="border border-black px-2 py-1">Pengarang</th>
-                        <th class="border border-black px-2 py-1">Penerbit</th>
-                        <th class="border border-black px-2 py-1">Tahun Terbit</th>
-                        <th class="border border-black px-2 py-1">ISBN</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="border border-black px-2 py-1">1</td>
-                        <td class="border border-black px-2 py-1">"Negara Demokrasi Indonesia"</td>
-                        <td class="border border-black px-2 py-1">Dadang Juliantara</td>
-                        <td class="border border-black px-2 py-1">Pondok Edukasi</td>
-                        <td class="border border-black px-2 py-1">2002</td>
-                        <td class="border border-black px-2 py-1">979-3305-00-2</td>
-                    </tr>
-                    <tr>
-                        <td class="border border-black px-2 py-1">2</td>
-                        <td class="border border-black px-2 py-1">"Terapi Madu"</td>
-                        <td class="border border-black px-2 py-1">Adji Suranto</td>
-                        <td class="border border-black px-2 py-1">Penebar PLUS</td>
-                        <td class="border border-black px-2 py-1">2012</td>
-                        <td class="border border-black px-2 py-1">978-0399590504
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="border border-black px-2 py-1">3</td>
-                        <td class="border border-black px-2 py-1">"Akuntansi Sektor Publik"</td>
-                        <td class="border border-black px-2 py-1">Mahmudi</td>
-                        <td class="border border-black px-2 py-1">UII Press</td>
-                        <td class="border border-black px-2 py-1">2016</td>
-                        <td class="border border-black px-2 py-1">9978-979-3333-98-4</td>
-                    </tr>
-                    <tr>
-                        <td class="border border-black px-2 py-1">4</td>
-                        <td class="border border-black px-2 py-1">"Pengantar Ilmu Komunikasi"</td>
-                        <td class="border border-black px-2 py-1">Hoeta Soehoet</td>
-                        <td class="border border-black px-2 py-1">Thomas Egerton Yayasan Kampus Tercinta IISP</td>
-                        <td class="border border-black px-2 py-1">2002</td>
-                        <td class="border border-black px-2 py-1">9799702542</td>
-                    </tr>
-                    <tr>
-                        <td class="border border-black px-2 py-1">5</td>
-                        <td class="border border-black px-2 py-1">"Psikologi Umum"</td>
-                        <td class="border border-black px-2 py-1">Kenneth Carter & Colleen M. Seifert</td>
-                        <td class="border border-black px-2 py-1">EGC</td>
-                        <td class="border border-black px-2 py-1">2017</td>
-                        <td class="border border-black px-2 py-1">979-044-790-5</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="grid grid-cols-2 gap-2 mb-2">
+            <ol>
+                <li style="color: white;margin-left: 20px;">CONTOH PENGGUNAAN INLINE STYLE SHEET</li>
+            </ol>
+            <ol>
+                <li style="color: white;margin-left: 20px;">CONTOH PENGGUNAAN INLINE STYLE SHEET</li>
+                <li style="color: rgb(216, 8, 8);margin-left: 20px;">CONTOH PENGGUNAAN INLINE STYLE SHEET</li>
+                <li style="color: white;margin-left: 20px;">Cascading Style Sheet (CSS) merupakan aturan untuk mengendalikan beberapa komponen dalam sebuah web sehingga akan lebih terstruktur dan seragam. CSS bukan merupakan bahasa pemograman.</li>
+            </ol>
         </div>
-        <div class="form-container">
-            <p style="margin-bottom: 50px"></p>
-            <form>
-                <h1 class="text-center font-bold text-lg mb-4">Formulir Pemesanan Buku</h1>
-                <form>
-                    <div class="grid grid-cols-2 gap-2 mb-2">
-                        <label class="text-right">Nama Lengkap:</label>
-                        <input type="text" class="border border-black p-1">
-                    </div>
-                    <div class="grid grid-cols-2 gap-2 mb-2">
-                        <label class="text-right">Nomor Anggota Perpustakaan:</label>
-                        <input type="text" class="border border-black p-1">
-                    </div>
-                    <div class="grid grid-cols-2 gap-2 mb-2">
-                        <label class="text-right">E-mail:</label>
-                        <input type="email" class="border border-black p-1" placeholder="@gmail.com">
-                    </div>
-                    <div class="grid grid-cols-2 gap-2 mb-2">
-                        <label class="text-right">Nomor Telepon:</label>
-                        <input type="number" class="border border-black p-1">
-                    </div>
-                    <div class="text-center font-bold mb-2">Detail Pemesanan Awal</div>
-                    <div class="grid grid-cols-2 gap-2 mb-2">
-                        <label class="text-right">Judul Buku Yang Di Pesan:</label>
-                        <input type="text" class="border border-black p-1">
-                    </div>
-                    <div class="grid grid-cols-2 gap-2 mb-2">
-                        <label class="text-right">Penulis Buku:</label>
-                        <input type="text" class="border border-black p-1">
-                    </div>
-                    <div class="grid grid-cols-2 gap-2 mb-2">
-                        <label class="text-right">Nomor ISBN:</label>
-                        <input type="text" class="border border-black p-1">
-                    </div>
-                    <div class="grid grid-cols-2 gap-2 mb-2">
-                        <label class="text-right">Tanggal Pemesanan:</label>
-                        <input type="date" class="border border-black p-1">
-                    </div>
-                   
-                    <div class="text-center">
-                        <button type="submit" class="bg-gray-300 border border-black px-4 py-1">Kirim</button>
-                    </div>
-                </form>
-            </div>
-            <div class="form-container">
-                <p style="margin-bottom: 10px"></p>
-                <form>
-                    <h1 class="text-center font-bold text-lg mb-4">Formulir Perpanjangan Peminjaman Buku</h1>
-                    <form>
-                        <div class="grid grid-cols-2 gap-2 mb-2">
-                            <label class="text-right">Nama Lengkap:</label>
-                            <input type="text" class="border border-black p-1">
-                        </div>
-                        <div class="grid grid-cols-2 gap-2 mb-2">
-                            <label class="text-right">Nomor Anggota Perpustakaan:</label>
-                            <input type="text" class="border border-black p-1">
-                        </div>
-                        <div class="grid grid-cols-2 gap-2 mb-2">
-                            <label class="text-right">e-mail:</label>
-                            <input type="email" class="border border-black p-1" placeholder="@gmail.com">
-                        </div>
-                        <div class="text-center font-bold mb-2">Detail Pemesanan Awal</div>
-                        <div class="grid grid-cols-2 gap-2 mb-2">
-                            <label class="text-right">Judul Buku Yang Di Pesan:</label>
-                            <input type="text" class="border border-black p-1">
-                        </div>
-                        <div class="grid grid-cols-2 gap-2 mb-2">
-                            <label class="text-right">Penulis Buku:</label>
-                            <input type="text" class="border border-black p-1">
-                        </div>
-                        <div class="grid grid-cols-2 gap-2 mb-2">
-                            <label class="text-right">Nomor ISBN:</label>
-                            <input type="text" class="border border-black p-1">
-                        </div>
-                        <div class="grid grid-cols-2 gap-2 mb-2">
-                            <label class="text-right">Penulis Buku:</label>
-                            <input type="text" class="border border-black p-1">
-                        </div>
-                        <div class="grid grid-cols-2 gap-2 mb-2">
-                            <label class="text-right">Nomor ISBN:</label>
-                            <input type="text" class="border border-black p-1">
-                        </div>
-                        <div class="grid grid-cols-2 gap-2 mb-2">
-                            <label class="text-right">Tanggal Peminjaman Buku:</label>
-                            <input type="date" class="border border-black p-1">
-                        </div>
-                        <div class="text-center font-bold mb-2">Perpanjangan Peminjaman Buku</div>
-                        <div class="grid grid-cols-2 gap-2 mb-2">
-                            <label class="text-right">Tanggal Perpanjangan Peminjaman Buku:</label>
-                            <input type="date" class="border border-black p-1">
-                        </div>
-                        <div class="grid grid-cols-2 gap-2 mb-2">
-                            <label class="text-right">Alasan Perpanjangan:</label>
-                            <input type="text" class="border border-black p-1">
-                        </div>
-                        <div class="text-center">
-                            <button type="submit" class="bg-gray-300 border border-black px-4 py-1">Kirim</button>
-                        </div>
-                    </form>
-                </div>
-    </form>
-</div>
+        <style type="text/css">
+            li{color:blue}
+            li{margin-left: 20px;}
+        </style>
+        <div class="grid grid-cols-2 gap-2 mb-2">
+            <ol>
+                <li >CONTOH PENGGUNAAN INTERNAL STYLE SHEET</li>
+            </ol>
+                <li >Menurut pemahaman saya, HTML adalah kerangka yang membentuk dan mengatur bagaimana sebuah halaman web akan ditampilkan di browser.<r></r> Untuk membentuk dan mengatur halaman tersebut kita menggunakan markah / tanda atau lebih umum disebut tag.</li>
+            </ol>
+        </div>
+    </p>
+    </div>
+
+</p>
   <footer class="fixed bottom-4 right-4">
    <a class="bg-red-700 text-white p-3 rounded-full shadow-lg hover:bg-red-800" href="#">
     <i class="fas fa-arrow-up">
