@@ -125,7 +125,7 @@
             <a href="modul5.html">Modul 5</a>
             <a href="modul6.html">Modul 6</a>
             <a href="modul7.php">Modul 7</a>
-            <a href="modul8.html">Modul 8</a>
+            <a href="modul8.php">Modul 8</a>
           </div></li>
             </ul>
         </div>
