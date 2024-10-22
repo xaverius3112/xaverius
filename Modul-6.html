@@ -1,171 +1,284 @@
-<html>
-<head>
-    <meta charset='UTF-8'/>
-    <meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/>
-    <meta content='IE=edge' http-equiv='X-UA-Compatible'/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
-    <link href="https://kado-untukmu.likeadream.repl.co/style.css" rel="stylesheet" type="text/css" />
-    <script src="https://kado-untukmu.likeadream.repl.co/script.js"></script>
-    <title>Web Perpustakaan</title>
-    <!-- Remove or update personal information in comments -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Universitas Katolik Santo Thomas</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- jQuery Library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- jQuery Plugin (Datepicker) -->
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <style>
-        body {
-            background-image: url(https://i.postimg.cc/44MkpRKs/IMG-20221017-205025.jpg);
-            background-repeat: no-repeat;
-            background-size: 105% 105%;
-            animation: none;
-            transition: all .3s ease;
-            filter: blur(10px); /* Add initial blur */
+      body {
+        background-image: url("https://st4.depositphotos.com/1022597/22670/i/450/depositphotos_226702720-stock-photo-brown-paper-texture-useful-background.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        font-family: "Arial", sans-serif;
+      }
+
+      .form-container {
+        width: 90%;
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 30px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: left;
+      }
+
+      .form-container h2 {
+        font-size: 24px;
+        color: #b91c1c;
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+
+      .form-container label {
+        font-size: 16px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 5px;
+        display: block;
+      }
+
+      .form-container input[type="text"],
+      .form-container input[type="email"],
+      .form-container input[type="date"],
+      .form-container select,
+      .form-container input[type="submit"],
+      #datepicker {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 16px;
+      }
+
+      #submitBtn {
+        background-color: #b91c1c;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        padding: 12px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      #submitBtn:hover {
+        background-color: #991b1b;
+      }
+
+      /* Dropdown Styles */
+      .dropdown {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+      }
+
+      .dropbtn {
+        width: 100%;
+        background-color: #b91c1c;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        text-align: left;
+        transition: background-color 0.3s ease;
+      }
+
+      .dropbtn:hover {
+        background-color: #991b1b;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 100%;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        border-radius: 5px;
+        margin-top: 5px;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        transition: background-color 0.3s ease;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #f1f1f1;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      /* Footer styles */
+      footer {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+      }
+
+      footer a {
+        background-color: #b91c1c;
+        color: white;
+        padding: 12px;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.3s ease;
+      }
+
+      footer a:hover {
+        background-color: #991b1b;
+      }
+
+      @media (max-width: 600px) {
+        .form-container {
+          width: 95%;
+          margin: 20px auto;
         }
-        
-        /* Add a new class for removing blur */
-        body.no-blur {
-            filter: blur(0);
-        }
+      }
     </style>
-</head>
-<body>
-    <div id='konten'>
-        <div class="foto">
-            <div class="image">
-                <!-- Foto -->
-                <img id="ftKm" src="https://i.postimg.cc/0jyyvR8J/images.jpg" width="100px" height="100px" onClick="klikfoto();"/>
-            </div>
-            <span style="font-weight:700;font-size: 13px" id="sp1"><div id="lope" style="display:inline-block;align-items:center;justify-content:center;">&#9829;</div></span>
-            <div id="sp2" style="display:none;"><span style="font-weight:700;font-size: 13px" id="finish"></span></div>
+  </head>
+  <body>
+    <header class="bg-red-700 text-white">
+      <div
+        class="container mx-auto flex justify-between items-center py-4 flex-wrap"
+      >
+        <div class="flex items-center mb-2">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/id/b/b7/Logo_UNIKA.png"
+            alt="University Logo"
+            class="mr-3"
+            width="50"
+            height="50"
+          />
+          <span class="text-xl font-bold"
+            >UNIVERSITAS KATOLIK SANTO THOMAS</span
+          >
         </div>
+        <nav>
+          <ul class="flex space-x-4 mb-2">
+            <li>
+              <a href="index.html" class="text-white hover:underline">Home</a>
+            </li>
+            <li class="dropdown">
+              <a href="javascript:void(0)" class="dropbtn">Layanan</a>
+              <div class="dropdown-content">
+                <a href="perpanjangan.html">Perpanjangan Peminjaman Buku</a>
+                <a href="pemesanan.html">Pemesanan Buku</a>
+                <a href="tabelbuku.html">Tabel Bahan Buku</a>
+                <a href="#">Sirkulasi</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="javascript:void(0)" class="dropbtn">Daftar Anggota</a>
+              <div class="dropdown-content">
+                <a href="daftaranggota.html">Daftar Online</a>
+                <a href="login.html">Login</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="javascript:void(0)" class="dropbtn">Tugas Web</a>
+              <div class="dropdown-content">
+                <a href="modul1.html">Modul 1</a>
+                <a href="modul2.html">Modul 2</a>
+                <a href="modul3.html">Modul 3</a>
+                <a href="modul4.html">Modul 4</a>
+                <a href="modul5.html">Modul 5</a>
+                <a href="modul6.html">Modul 6</a>
+                <a href="modul7.php">Modul 7</a>
+                <a href="modul8.php">Modul 8</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-        <audio style="display:none;margin:20px 0;" controls autoplay loop>
-            <source src="LINK" type="audio/mpeg">
-        </audio>
+    <!-- Form Section with improved styling -->
+    <div class="form-container">
+      <h2>Formulir Pemesanan Buku</h2>
+      <label for="name">Nama:</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Masukkan Nama Anda"
+      />
 
-        <div id='scrollImage'>
-            <p>Hai&nbsp;<b id="kamu"></b>&nbsp;manis ><</p>
-            <p>apa kabar ?</p>
-            <p>aku harap kamu baik² aja😅</p>
-            <p>semangat ya kuliahnya ☺️</p>
-            <p>sebenarnya aku suka sama kamu </p>
-            <p>tapi aku takut<img style="margin-left:10px;" alt="Pentol" src="https://c.tenor.com/AlUwZp0ih_wAAAAi/pentol-quby.gif" height="70" /></p>
-            <p>takut kalau habis confes kita jadi asing</p>
-            <p>ga enak asing satu kelas </p>
-            <p>tapi pengen banget
-pacaran sama kamu🙃🥲</p>
-            <p>pengen jalanin hari hari bareng kamu</p>
-            <p>maaf ya kalau aku ke pedean</p>
-            <p><img style="margin-right:10px;" alt="Pentol" src="https://c.tenor.com/1Si3A6alsiEAAAAi/pentol-quby.gif" height="70" />
-            Okeyy?</p>
-            <p>i love you ❤️&nbsp;<span id="wrnRed">><</span></p>
-            <p>kamu mau ga jadi pacar aku?
-kalau mau balas ke wa ya&#10084;&#65039;</p>
-            <p>coba klik foto di atas~<img style="margin-left:10px;" alt="Pentol" src="https://c.tenor.com/oQ_6wxtMrx0AAAAi/pentol-quby.gif" height="70" /></p>
-        </div>
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Masukkan Email Anda"
+      />
+      <label for="book">Pilih Buku:</label>
+      <select id="book" name="book">
+        <option value="">-- Pilih Buku --</option>
+        <option value="Buku 1">Buku 1</option>
+        <option value="Buku 2">Buku 2</option>
+        <option value="Buku 3">Buku 3</option>
+        <option value="Buku 4">Buku 4</option>
+      </select>
+
+      <label for="date">Tanggal Pemesanan:</label>
+      <input type="text" id="datepicker" placeholder="Pilih Tanggal" />
+
+      <button id="submitBtn">Submit</button>
     </div>
 
-    <div id="contTom"><a class='button whatsapp' onClick='bukaWa();'><i class='icon whatsapp'></i>Kirim</a></div>
+    <!-- Footer -->
+    <footer>
+      <a href="#">
+        <i class="fas fa-arrow-up"></i>
+      </a>
+    </footer>
 
-    <script>  
-        var a = 0, finish;
-        finish = "I miss you ❤️";
-        
-        //Opsi WhatsApp
-        function bukaWa(){
-            // Use template literals for better readability
-            window.location = `https://api.whatsapp.com/send?phone=+62 838-6585-1734&text=Hai, Aku *${nama}*%0A%0A*${nama}* udah bacain semuanya. Makasih yaaa *${author}* aku mau kok jadi pacar kamu><%0A%0A*Dikirim:* ${dateTime}`;
-        } 
+    <!-- jQuery Script for Datepicker -->
+    <script>
+      $(document).ready(function () {
+        // Initialize datepicker
+        $("#datepicker").datepicker();
 
-        var today = new Date();
-        var date = today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear()+'.';
-        var dateTime = date;
-
-        const swals = Swal.mixin({
-            cancelButtonColor: '#909090',
-            confirmButtonColor: '#00B487',
-            allowOutsideClick: false,
+        // jQuery Event Handler
+        $("#submitBtn").click(function () {
+          const name = $("#name").val();
+          const email = $("#email").val();
+          alert(`Terima kasih, ${name}! Konfirmasi telah dikirim ke ${email}.`);
         });
-
-        async function mulai(){
-            try {
-                // Add blur effect at the start
-                document.body.classList.remove('no-blur');
-                
-                // Show initial pop-up
-                await swals.fire({
-                    title: 'Selamat Datang!',
-                    text: 'Aku punya sesuatu buat kamu.',
-                    confirmButtonText: 'Lanjut',
-                });
-
-                const { value: nama } = await swals.fire({
-                    title: 'Nama kamu?',
-                    input: 'text',
-                    confirmButtonText: 'Lanjut',
-                    showCancelButton: false,
-                });                           
-                if(nama){
-                    window.nama = nama;
-                    finish = `${finish}, ${nama}!`;    
-                    document.getElementById("kamu").textContent = window.nama;                      
-                    const { value: author } = await swals.fire({
-                        title: `${nama} tau Aku siapa? Spill namanya dong!`,
-                        input: 'text',
-                        confirmButtonText: 'Lanjut',
-                        showCancelButton: false,
-                    });                
-                    if(author && author !== nama){
-                        document.getElementById("sp1").textContent = `Dari ${author}, Untuk ${window.nama}!`;
-                        window.author = author;                   
-                        await swals.fire(`Sekarang lihat ini ya ❤️`);
-                        setTimeout(showDiv, 100);                                    
-                    } else {
-                        await swals.fire('Nama tidak boleh kosong/sama dengan nama kamu!');
-                        mulai();
-                    }
-                } else {
-                    await swals.fire('Nama tidak boleh kosong, ya!');
-                    mulai();
-                }
-            } catch (error) {
-                console.error('Error in mulai function:', error);
-            }
-        }
-
-        function nonDiv() {
-            document.getElementById('konten').style.opacity = "0";
-        } 
-
-        function showDiv() {
-            document.getElementById('konten').style.opacity = "1";
-            document.getElementById('konten').style.top = "0";
-            document.querySelector("body").style.animation = "anim 9s ease infinite";
-            // Remove blur effect
-            document.body.classList.add('no-blur');
-        }
-
-        function tombol() {
-            document.getElementById('contTom').style.margin = "0";
-            document.getElementById('contTom').style.opacity = "1";
-            var e1 = document.getElementById('ftKm');
-            e1.classList.add("degdeg");
-        }  
-
-        function klikfoto() {
-            document.getElementById('sp1').style.display = "none";
-            document.getElementById('sp2').style.display = "block";
-            if(a < finish.length){
-                document.getElementById("finish").innerHTML += finish.charAt(a);
-                a++;
-                setTimeout(klikfoto,100);
-            } 
-            if(a == finish.length){
-                setTimeout(tombol,500);
-            }
-        }
-
-        // Call mulai function immediately when the page loads
-        document.addEventListener('DOMContentLoaded', mulai);
+      });
     </script>
-</body>
+  </body>
 </html>
