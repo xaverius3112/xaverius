@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <title>modul 4</title>
+    <title>modul 7</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="modul-4.css" media="screen">
+<link rel="stylesheet" href="modul-7.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 6.19.6, nicepage.com">
@@ -53,6 +53,70 @@
         .marquee-container:hover .marquee-content {
           animation-play-state: paused;
         }
+
+        /* ... existing styles ... */
+        
+        /* Animated Background */
+        body {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            min-height: 100vh;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Optional: Add floating particles */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            animation: float 6s infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Make content more readable with semi-transparent background */
+        .u-section-1 {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Enhance header appearance */
+        .u-header {
+            background:
     </style>
     
     
@@ -83,19 +147,7 @@
             <a href="#" class="u-align-center u-image u-logo u-image-1" data-image-width="224" data-image-height="225">
               <img src="images/images.png" class="u-logo-image u-logo-image-1" data-image-width="80">
             </a>
-            <div class="u-social-icons u-spacing-10 u-social-icons-1">
-              <a class="u-social-url" title="facebook" target="_blank" href="https://facebook.com/XaveriusDFUjunG31"><span class="u-icon u-social-facebook u-social-icon u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" ><use xlink:href="#svg-d52b"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-d52b"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M73.5,31.6h-9.1c-1.4,0-3.6,0.8-3.6,3.9v8.5h12.6L72,58.3H60.8v40.8H43.9V58.3h-8V43.9h8v-9.2
-c0-6.7,3.1-17,17-17h12.5v13.9H73.5z"></path></svg></span>
-              </a>
-              <a class="u-social-url" title="twitter" target="_blank" href="https://twitter.com/UjungXaver35567"><span class="u-icon u-social-icon u-social-twitter u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112.2 112.2" ><use xlink:href="#svg-0473"></use></svg><svg class="u-svg-content" viewBox="0 0 112.2 112.2" x="0px" y="0px" id="svg-0473"><circle fill="currentColor" cx="56" cy="56" r="55"></circle><path fill="#FFFFFF" d="M63.9,51l22.4-24h-8.6L60.3,45.9L46.9,27H24l23.3,32.8L24,85h8.2L51,64.9L65.3,85H88L63.9,51z M55.3,60.2
-l-3.7-5.1L35.7,33.1h8.1l12.3,17.2l3.7,5.1l16.6,23.4h-7.8L55.3,60.2z"></path></svg></span>
-              </a>
-              <a class="u-social-url" title="instagram" target="_blank" href="https://instagram.com/onelastbreath.me"><span class="u-icon u-social-icon u-social-instagram u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" ><use xlink:href="#svg-b500"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-b500"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M55.9,38.2c-9.9,0-17.9,8-17.9,17.9C38,66,46,74,55.9,74c9.9,0,17.9-8,17.9-17.9C73.8,46.2,65.8,38.2,55.9,38.2
-z M55.9,66.4c-5.7,0-10.3-4.6-10.3-10.3c-0.1-5.7,4.6-10.3,10.3-10.3c5.7,0,10.3,4.6,10.3,10.3C66.2,61.8,61.6,66.4,55.9,66.4z"></path><path fill="#FFFFFF" d="M74.3,33.5c-2.3,0-4.2,1.9-4.2,4.2s1.9,4.2,4.2,4.2s4.2-1.9,4.2-4.2S76.6,33.5,74.3,33.5z"></path><path fill="#FFFFFF" d="M73.1,21.3H38.6c-9.7,0-17.5,7.9-17.5,17.5v34.5c0,9.7,7.9,17.6,17.5,17.6h34.5c9.7,0,17.5-7.9,17.5-17.5V38.8
-C90.6,29.1,82.7,21.3,73.1,21.3z M83,73.3c0,5.5-4.5,9.9-9.9,9.9H38.6c-5.5,0-9.9-4.5-9.9-9.9V38.8c0-5.5,4.5-9.9,9.9-9.9h34.5
-c5.5,0,9.9,4.5,9.9,9.9V73.3z"></path></svg></span>
-              </a>
-            </div>
+        
           </div>
           
           
@@ -130,7 +182,7 @@ c5.5,0,9.9,4.5,9.9,9.9V73.3z"></path></svg></span>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="Modul-4.html">Modul 4</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="Modul-5.html">Modul 5</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="Modul-6.html">Modul 6</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="Modul-7.html">Modul 7</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="modul7.php">Modul 7</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="Modul-8.html">Modul 8</a>
 </li></ul>
 </div>
@@ -194,12 +246,12 @@ c5.5,0,9.9,4.5,9.9,9.9V73.3z"></path></svg></span>
     <!-- Operasi Bilangan -->
     <div class="form-container" id="operasi">
         <h2>Input Bilangan</h2>
-        <form action="http://localhost/xaverius-main/modul7.php" method="post">
+        <form id="calculatorForm" onsubmit="return calculateResult(event)">
             <label for="bilangan1">Bilangan Pertama:</label>
-            <input type="text" id="bilangan1" name="bilangan1" required="">
+            <input type="number" id="bilangan1" name="bilangan1" required>
 
             <label for="bilangan2">Bilangan Kedua:</label>
-            <input type="text" id="bilangan2" name="bilangan2" required="">
+            <input type="number" id="bilangan2" name="bilangan2" required>
 
             <label for="operator">Pilih Operasi:</label>
             <select id="operator" name="operator">
@@ -209,25 +261,109 @@ c5.5,0,9.9,4.5,9.9,9.9V73.3z"></path></svg></span>
                 <option value="/">Bagi</option>
             </select>
 
-            <input type="submit" value="Hitung" name="hitung">
-        </form>
-
+            <div class="button-group">
+                <input type="submit" value="Hitung" class="btn btn-primary">
+                <button type="button" onclick="clearCalculator()" class="btn btn-secondary">Reset</button>
+                <button type="button" onclick="generateRandom()" class="btn btn-info">Generate Angka Random</button>
             </div>
+            <div id="result"></div>
+        </form>
+    </div>
 
     <!-- Halaman Login -->
     <div class="form-container" id="login">
         <h2>Halaman Login</h2>
-        <form action="http://localhost/xaverius-main/modul7.php" method="post">
+        <form id="loginForm" onsubmit="return handleLogin(event)">
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required="">
+            <input type="text" id="username" name="username" required>
 
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required="">
-
-            <input type="submit" value="Login" name="login">
-        </form>
-
+            <input type="password" id="password" name="password" required>
+            
+            <div class="button-group">
+                <input type="submit" value="Login" class="btn btn-primary">
+                <button type="button" onclick="clearLogin()" class="btn btn-secondary">Reset</button>
+                <button type="button" onclick="togglePassword()" class="btn btn-info">
+                    <i class="fas fa-eye" id="toggleIcon"></i>
+                </button>
             </div>
+            <div id="loginMessage"></div>
+        </form>
+    </div>
+
+    <!-- Add this CSS -->
+    <style>
+    .button-group {
+        display: flex;
+        gap: 10px;
+        margin: 15px 0;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+        opacity: 0.8;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .btn-secondary {
+        background-color: #6c757d;
+        color: white;
+    }
+
+    .btn-info {
+        background-color: #17a2b8;
+        color: white;
+    }
+    </style>
+
+    <!-- Add these JavaScript functions -->
+    <script>
+    // ... existing JavaScript code ...
+
+    function clearCalculator() {
+        document.getElementById('bilangan1').value = '';
+        document.getElementById('bilangan2').value = '';
+        document.getElementById('operator').selectedIndex = 0;
+        document.getElementById('result').innerHTML = '';
+    }
+
+    function generateRandom() {
+        document.getElementById('bilangan1').value = Math.floor(Math.random() * 100);
+        document.getElementById('bilangan2').value = Math.floor(Math.random() * 100);
+    }
+
+    function clearLogin() {
+        document.getElementById('username').value = '';
+        document.getElementById('password').value = '';
+        document.getElementById('loginMessage').innerHTML = '';
+    }
+
+    function togglePassword() {
+        const passwordInput = document.getElementById('password');
+        const toggleIcon = document.getElementById('toggleIcon');
+        
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            toggleIcon.classList.remove('fa-eye');
+            toggleIcon.classList.add('fa-eye-slash');
+        } else {
+            passwordInput.type = 'password';
+            toggleIcon.classList.remove('fa-eye-slash');
+            toggleIcon.classList.add('fa-eye');
+        }
+    }
+    </script>
       
           
 </section>
@@ -242,6 +378,277 @@ c5.5,0,9.9,4.5,9.9,9.9V73.3z"></path></svg></span>
     </div>
   </div>
 </footer>
+
+<a href="#" class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+</a>
+
+<!-- Tambahkan Font Awesome untuk ikon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<script>
+function calculateResult(event) {
+    event.preventDefault();
+    
+    const num1 = parseFloat(document.getElementById('bilangan1').value);
+    const num2 = parseFloat(document.getElementById('bilangan2').value);
+    const operator = document.getElementById('operator').value;
+    let result;
+
+    switch(operator) {
+        case '+':
+            result = num1 + num2;
+            break;
+        case '-':
+            result = num1 - num2;
+            break;
+        case '*':
+            result = num1 * num2;
+            break;
+        case '/':
+            if(num2 === 0) {
+                document.getElementById('result').innerHTML = 'Tidak bisa membagi dengan nol';
+                return false;
+            }
+            result = num1 / num2;
+            break;
+    }
+
+    document.getElementById('result').innerHTML = `Hasil: ${result}`;
+    return false;
+}
+
+// Add this before the handleLogin function
+const userAccounts = [
+    { username: 'admin', password: 'admin123', role: 'administrator' },
+    { username: '222201031', password: '222201031', role: 'user' },
+    { username: 'staff', password: 'staff123', role: 'staff' },
+    { username: 'guest', password: 'guest123', role: 'guest' },
+    { username: 'manager', password: 'manager123', role: 'manager' }
+];
+
+function handleLogin(event) {
+    event.preventDefault();
+    
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const loginMessage = document.getElementById('loginMessage');
+    
+    // Find user in userAccounts array
+    const user = userAccounts.find(account => 
+        account.username === username && account.password === password
+    );
+    
+    if (user) {
+        loginMessage.innerHTML = `
+            <div class="alert alert-success">
+                Login berhasil!<br>
+                Selamat datang ${username}<br>
+                Role: ${user.role}
+            </div>`;
+        loginMessage.style.color = 'green';
+        
+        // Optional: Redirect based on role
+        setTimeout(() => {
+            switch(user.role) {
+                case 'administrator':
+                    // window.location.href = 'admin-dashboard.html';
+                    break;
+                case 'staff':
+                    // window.location.href = 'staff-dashboard.html';
+                    break;
+                // Add more cases as needed
+            }
+        }, 2000);
+    } else {
+        loginMessage.innerHTML = `
+            <div class="alert alert-danger">
+                Login gagal! Username atau password salah.
+            </div>`;
+        loginMessage.style.color = 'red';
+    }
+    
+    return false;
+}
+
+// Add this CSS for login messages
+const styles = `
+<style>
+    .alert {
+        padding: 10px;
+        border-radius: 4px;
+        margin-top: 10px;
+    }
+    
+    .alert-success {
+        background-color: #d4edda;
+        border-color: #c3e6cb;
+        color: #155724;
+    }
+    
+    .alert-danger {
+        background-color: #f8d7da;
+        border-color: #f5c6cb;
+        color: #721c24;
+    }
+    
+    /* Add this to the existing login form styles */
+    #loginForm {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .login-info {
+        background-color: #e9ecef;
+        padding: 15px;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        font-size: 0.9em;
+    }
+</style>
+`;
+
+// Add this HTML above the login form to show available accounts
+const loginInfo = `
+<div class="login-info">
+    <h4>Available Test Accounts:</h4>
+    <ul>
+        <li>Administrator: admin / admin123</li>
+        <li>User: user1 / user123</li>
+        <li>Staff: staff / staff123</li>
+        <li>Guest: guest / guest123</li>
+        <li>Manager: manager / manager123</li>
+    </ul>
+</div>
+`;
+
+// Add this to your document when it loads
+document.addEventListener('DOMContentLoaded', function() {
+    // Add styles to head
+    document.head.insertAdjacentHTML('beforeend', styles);
+    
+    // Add login info before the login form
+    const loginForm = document.getElementById('loginForm');
+    loginForm.insertAdjacentHTML('beforebegin', loginInfo);
+});
+
+// Back to Top Button Script
+document.addEventListener('DOMContentLoaded', function() {
+    const backToTopButton = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) { // Show button after 300px scroll
+            backToTopButton.classList.add('visible');
+        } else {
+            backToTopButton.classList.remove('visible');
+        }
+    });
+
+    backToTopButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
+
+<style>
+    /* ... existing styles ... */
+
+    /* Animated Section Background */
+    .u-section-1 {
+        background: linear-gradient(135deg, 
+            rgba(85, 51, 255, 0.8),
+            rgba(5, 213, 255, 0.8),
+            rgba(166, 255, 203, 0.8));
+        background-size: 300% 300%;
+        animation: gradientBG 12s ease infinite;
+        border-radius: 15px;
+        padding: 25px;
+        margin: 30px auto;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    @keyframes gradientBG {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    /* Form Container Styling */
+    .form-container {
+        background: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 25px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .form-container:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Heading Styles */
+    .form-container h2 {
+        color: #2c3e50;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        font-size: 1.5em;
+        letter-spacing: 1px;
+    }
+
+    /* Input Field Styling */
+    .form-container input[type="number"],
+    .form-container input[type="text"] {
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid rgba(52, 152, 219, 0.3);
+        border-radius: 5px;
+        padding: 10px;
+        width: 100%;
+        margin-bottom: 15px;
+        transition: all 0.3s ease;
+    }
+
+    .form-container input:focus {
+        border-color: #3498db;
+        box-shadow: 0 0 10px rgba(52, 152, 219, 0.2);
+        outline: none;
+    }
+
+    /* List Styling */
+    .form-container ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .form-container li {
+        background: rgba(255, 255, 255, 0.7);
+        margin: 5px 0;
+        padding: 10px;
+        border-radius: 5px;
+        border-left: 3px solid #3498db;
+        transition: all 0.3s ease;
+    }
+
+    .form-container li:hover {
+        background: rgba(255, 255, 255, 0.9);
+        transform: translateX(5px);
+    }
+</style>
 
 </body>
 </html>
