@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perpustakaan</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-light">
+        <div class="container">
+            <div class="row align-items-center d-flex">
+                <div class="col-md-2 d-flex align-items-center">
+                    <img src="images/logo.png" alt="Logo Perpustakaan" class="img-fluid" style="max-width: 50px; height: auto;">
+                    <span class="ml-2" style="color: black; font-family: 'Roboto', sans-serif;">Perpustakaan UNIKA</span>
+                </div>
+                <div class="col-md-10">
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="profile.html">Profil</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#layanan" id="layananDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Layanan Kami</a>
+                                    <div class="dropdown-menu" aria-labelledby="layananDropdown">
+                                        <a class="dropdown-item" href="daftaranggota.html">Daftar Anggota</a>
+                                        <a class="dropdown-item" href="tabelbuku.html">Tabel Buku</a>
+                                        <a class="dropdown-item" href="pengembalian.html">Pengembalian</a>
+                                        <a class="dropdown-item" href="peminjaman.html">Peminjaman</a>
+                                        <a class="dropdown-item" href="pemesananbuku.html">Pemesanan Buku</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#Modul" id="modulDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Modul</a>
+                                    <div class="dropdown-menu" aria-labelledby="modulDropdown">
+                                        <a class="dropdown-item" href="modul1.html">Modul 1</a>
+                                        <a class="dropdown-item" href="modul2.html">Modul 2</a>
+                                        <a class="dropdown-item" href="modul3.html">Modul 3</a>
+                                        <a class="dropdown-item" href="modul4.html">Modul 4</a>
+                                        <a class="dropdown-item" href="modul5.html">Modul 5</a>
+                                        <a class="dropdown-item" href="modul6.html">Modul 6</a>
+                                        <a class="dropdown-item" href="http://localhost/xav/">Modul 7</a>
+                                        <a class="dropdown-item" href="http://localhost/xav/">Modul 8</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#Log In" id="loginDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Log In</a>
+                                    <div class="dropdown-menu" aria-labelledby="loginDropdown">
+                                        <a class="dropdown-item" href="login.html">Login</a>
+                                        <a class="dropdown-item" href="register.html">Register</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mt-4">
+        <!-- Konten utama di sini -->
+        <div class="media-content">
+            <!-- Audio -->
+            <div class="audio-player-container" style="background-image: url('images/queen.webp'); background-size: cover; padding: 20px; border-radius: 10px;">
+                <audio controls class="audio-player" style="width: 100%; background-color: rgba(255, 255, 255, 0.8); border-radius: 5px;">
+                    <source src="images/Queen – Bohemian Rhapsody (Official Video Remastered) - Queen Official (youtube).mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <!-- Video YouTube -->
+            <div class="video-container mt-4">
+                <iframe class="video-frame" width="560" height="315" src="https://www.youtube.com/embed/G7Xse5t2924?si=OLe2APqSCVWSV4Tk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Paragraf kelebihan HTML5 -->
+            <div class="text-box mt-4 p-3 border rounded" style="background-color: #f8f9fa;">
+                <h5>Kelebihan HTML5 dibandingkan HTML</h5>
+                <p>HTML5 menawarkan banyak kelebihan dibandingkan dengan versi HTML sebelumnya, termasuk dukungan untuk elemen multimedia seperti audio dan video tanpa memerlukan plugin tambahan. Ini memungkinkan integrasi yang lebih mudah dan lebih efisien dari konten multimedia di web Perpustakaan, seperti audio dan video yang sudah ada di halaman ini. Selain itu, HTML5 menyediakan elemen semantik yang lebih baik, seperti <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, dan <code>&lt;main&gt;</code>, yang membantu dalam pengorganisasian dan aksesibilitas konten web.</p>
+            </div>
+        </div>
+    </main>
+    <section class="bg-light text-center py-3" style="margin-top: 40px;">   
+        
+    <footer class="bg-light text-center py-3" style="margin-top: 20px;">
+        <p>Copyright © 2022 — Made with 💛 Perpustakaan Universitas Katolik Santo Thomas</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

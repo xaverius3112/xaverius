@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perpustakaan</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .neon-border {
+            border: 5px solid transparent;
+            box-shadow: 0 0 10px #00e6e6, 0 0 20px #00e6e6, 0 0 30px #00e6e6, 0 0 40px #00e6e6;
+            transition: box-shadow 0.3s ease-in-out;
+            animation: runningNeon 5s linear infinite;
+            border-radius: 50% 25%;
+        }
+
+        @keyframes runningNeon {
+            0% {
+                box-shadow: 0 0 10px #00e6e6, 0 0 20px #00e6e6, 0 0 30px #00e6e6, 0 0 40px #00e6e6;
+            }
+            25% {
+                box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
+            }
+            50% {
+                box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000;
+            }
+            75% {
+                box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
+            }
+            100% {
+                box-shadow: 0 0 10px #0000ff, 0 0 20px #0000ff, 0 0 30px #0000ff, 0 0 40px #0000ff;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-light">
+        <div class="container">
+            <div class="row align-items-center d-flex">
+                <div class="col-md-2 d-flex align-items-center">
+                    <img src="images/logo.png" alt="Logo Perpustakaan" class="img-fluid" style="max-width: 50px; height: auto;">
+                    <span class="ml-2" style="color: black; font-family: 'Roboto', sans-serif;">Perpustakaan UNIKA</span>
+                </div>
+                <div class="col-md-10">
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="profile.html">Profil</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#layanan" id="layananDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Layanan Kami</a>
+                                    <div class="dropdown-menu" aria-labelledby="layananDropdown">
+                                        <a class="dropdown-item" href="daftaranggota.html">Daftar Anggota</a>
+                                        <a class="dropdown-item" href="tabelbuku.html">Tabel Buku</a>
+                                        <a class="dropdown-item" href="pengembalian.html">Pengembalian</a>
+                                        <a class="dropdown-item" href="peminjaman.html">Peminjaman</a>
+                                        <a class="dropdown-item" href="pemesananbuku.html">Pemesanan Buku</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#Modul" id="modulDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Modul</a>
+                                    <div class="dropdown-menu" aria-labelledby="modulDropdown">
+                                        <a class="dropdown-item" href="modul1.html">Modul 1</a>
+                                        <a class="dropdown-item" href="modul2.html">Modul 2</a>
+                                        <a class="dropdown-item" href="modul3.html">Modul 3</a>
+                                        <a class="dropdown-item" href="modul4.html">Modul 4</a>
+                                        <a class="dropdown-item" href="modul5.html">Modul 5</a>
+                                        <a class="dropdown-item" href="modul6.html">Modul 6</a>
+                                        <a class="dropdown-item" href="http://localhost/xav/">Modul 7</a>
+                                        <a class="dropdown-item" href="http://localhost/xav/">Modul 8</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#Log In" id="loginDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Log In</a>
+                                    <div class="dropdown-menu" aria-labelledby="loginDropdown">
+                                        <a class="dropdown-item" href="login.html">Login</a>
+                                        <a class="dropdown-item" href="register.html">Register</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mt-4">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="images/unika2.jpeg" alt="Foto Pembuat" class="img-fluid modern-square" style="max-width: 100%;">
+            </div>
+            <div class="col-md-8">
+                <h2>Perkenalan</h2>
+                <p>Halo, nama saya Xaverius D. F Ujung. Saya adalah pembuat web ini. Saya memiliki pengalaman dalam pengembangan web dan sangat antusias untuk berbagi pengetahuan dan layanan melalui platform ini. Terima kasih telah mengunjungi situs kami!</p>
+            </div>
+        </div>
+        <!-- Galeri Foto -->
+        <div class="row mt-4">
+            <h3>Galeri Foto</h3>
+            <!-- Foto 1 hingga 10 -->
+            <div class="col-md-3 mb-3">
+                <img src="images/ft1.JPG" alt="Foto 1" class="img-fluid modern-square">
+            </div>
+            <div class="col-md-3 mb-3">
+                <img src="images/ft2.JPG" alt="Foto 2" class="img-fluid modern-square">
+            </div>
+            <div class="col-md-3 mb-3">
+                <img src="images/ft3.JPG" alt="Foto 3" class="img-fluid modern-square">
+            </div>
+            <div class="col-md-3 mb-3">
+                <img src="images/ft4.JPG" alt="Foto 4" class="img-fluid modern-square">
+            </div>
+            <div class="col-md-3 mb-3">
+                <img src="images/ft5.JPG" alt="Foto 5" class="img-fluid modern-square">
+            </div>
+            <div class="col-md-3 mb-3">
+                <img src="images/ft6.JPG" alt="Foto 6" class="img-fluid modern-square">
+            </div>
+            <div class="col-md-3 mb-3">
+                <img src="images/ft7.JPG" alt="Foto 7" class="img-fluid modern-square">
+            </div>
+            <div class="col-md-3 mb-3">
+                <img src="images/ft8.JPG" alt="Foto 8" class="img-fluid modern-square">
+            </div>
+            <div class="col-md-3 mb-3">
+                <img src="images/ft9.JPG" alt="Foto 9" class="img-fluid modern-square">
+            </div>
+            <div class="col-md-3 mb-3">
+                <img src="images/ft10.JPG" alt="Foto 10" class="img-fluid modern-square">
+            </div>
+            <!-- Foto 11 hingga 23 -->
+            <div class="col-md-3 mb-3">
+                <img src="images/ft11.JPG" alt="Foto 11" class="img-fluid modern-square">
+            </div>
+            <div class="col-md-3 mb-3">
+                <img src="images/ft12.JPG" alt="Foto 12" class="img-fluid modern-square">
+            </div>
+            <div class="col-md-3 mb-3">
+                <img src="images/ft13.JPG" alt="Foto 13" class="img-fluid modern-square">
+            </div>
+            <div class="col-md-3 mb-3">
+                <img src="images/ft14.JPG" alt="Foto 14" class="img-fluid modern-square">
+            </div>
+            <div class="col-md-3 mb-3">
+                <img src="images/ft15.JPG" alt="Foto 15" class="img-fluid modern-square">
+            </div>
+            <div class="col-md-3 mb-3">
+                <img src="images/ft16.JPG" alt="Foto 16" class="img-fluid modern-square">
+            </div>
+            <div class="col-md-3 mb-3">
+                <img src="images/ft17.JPG" alt="Foto 17" class="img-fluid modern-square">
+            </div>
+            <div class="col-md-3 mb-3">
+                <img src="images/ft18.JPG" alt="Foto 18" class="img-fluid modern-square">
+            </div>
+            <div class="col-md-3 mb-3">
+                <img src="images/ft19.JPG" alt="Foto 19" class="img-fluid modern-square">
+            </div>
+            <div class="col-md-3 mb-3">
+                <img src="images/ft20.JPG" alt="Foto 20" class="img-fluid modern-square">
+            </div>
+            <div class="col-md-3 mb-3">
+                <img src="images/ft21.JPG" alt="Foto 21" class="img-fluid modern-square">
+            </div>
+            <div class="col-md-3 mb-3">
+                <img src="images/ft22.JPG" alt="Foto 22" class="img-fluid modern-square">
+            </div>
+            <div class="col-md-3 mb-3">
+                <img src="images/ft23.JPG" alt="Foto 23" class="img-fluid modern-square">
+            </div>
+        </div>
+    </main>
+    <section class="bg-light text-center py-3" style="margin-top: 40px;">   
+        
+        <footer class="bg-light text-center py-3" style="margin-top: 20px;">
+            <p>Copyright © 2022 — Made with 💛 Perpustakaan Universitas Katolik Santo Thomas</p>
+        </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+

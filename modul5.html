@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perpustakaan</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-light">
+        <div class="container">
+            <div class="row align-items-center d-flex">
+                <div class="col-md-2 d-flex align-items-center">
+                    <img src="images/logo.png" alt="Logo Perpustakaan" class="img-fluid" style="max-width: 50px; height: auto;">
+                    <span class="ml-2" style="color: black; font-family: 'Roboto', sans-serif;">Perpustakaan UNIKA</span>
+                </div>
+                <div class="col-md-10">
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="profile.html">Profil</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#layanan" id="layananDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Layanan Kami</a>
+                                    <div class="dropdown-menu" aria-labelledby="layananDropdown">
+                                        <a class="dropdown-item" href="daftaranggota.html">Daftar Anggota</a>
+                                        <a class="dropdown-item" href="tabelbuku.html">Tabel Buku</a>
+                                        <a class="dropdown-item" href="pengembalian.html">Pengembalian</a>
+                                        <a class="dropdown-item" href="peminjaman.html">Peminjaman</a>
+                                        <a class="dropdown-item" href="pemesananbuku.html">Pemesanan Buku</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#Modul" id="modulDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Modul</a>
+                                    <div class="dropdown-menu" aria-labelledby="modulDropdown">
+                                        <a class="dropdown-item" href="modul1.html">Modul 1</a>
+                                        <a class="dropdown-item" href="modul2.html">Modul 2</a>
+                                        <a class="dropdown-item" href="modul3.html">Modul 3</a>
+                                        <a class="dropdown-item" href="modul4.html">Modul 4</a>
+                                        <a class="dropdown-item" href="modul5.html">Modul 5</a>
+                                        <a class="dropdown-item" href="modul6.html">Modul 6</a>
+                                        <a class="dropdown-item" href="http://localhost/xav/">Modul 7</a>
+                                        <a class="dropdown-item" href="http://localhost/xav/">Modul 8</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#Log In" id="loginDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Log In</a>
+                                    <div class="dropdown-menu" aria-labelledby="loginDropdown">
+                                        <a class="dropdown-item" href="login.html">Login</a>
+                                        <a class="dropdown-item" href="register.html">Register</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mt-4">
+      
+        <h1>Contoh JavaScript</h1>
+        <p>Untuk menampilkan data dalam JavaScript di halaman web, Anda dapat menggunakan metode DOM (Document Object Model) untuk memanipulasi elemen HTML. Pertama, Anda perlu mendapatkan referensi ke elemen HTML yang ingin Anda gunakan untuk menampilkan data, biasanya dengan menggunakan metode seperti <code>document.getElementById()</code> atau <code>document.querySelector()</code>. Setelah Anda memiliki referensi elemen, Anda dapat mengubah kontennya dengan mengatur properti <code>innerHTML</code> atau <code>textContent</code> dari elemen tersebut. Misalnya, jika Anda memiliki elemen <code>&lt;div id="output"&gt;&lt;/div&gt;</code> di HTML Anda, Anda dapat menampilkan data dengan JavaScript menggunakan kode berikut: <code>document.getElementById('output').innerHTML = 'Data yang ingin ditampilkan';</code>. Dengan cara ini, Anda dapat secara dinamis memperbarui konten halaman web berdasarkan data yang Anda miliki di JavaScript.</p>
+        <div id="output"></div>
+        <script>
+            // Variabel
+            let books = ["Buku A", "Buku B", "Buku C"];
+            let message = "Daftar Buku: ";
+    
+            // Operator
+            let totalBooks = books.length;
+            message += totalBooks + " buku tersedia.";
+    
+            // Struktur Kondisi
+            if (totalBooks > 0) {
+                message += " Berikut adalah daftar buku:";
+                for (let i = 0; i < books.length; i++) {
+                    message += "<br>" + (i + 1) + ". " + books[i];
+                }
+            } else {
+                message += " Tidak ada buku yang tersedia.";
+            }
+    
+            // Menampilkan hasil
+            document.getElementById('output').innerHTML = message;
+        </script>
+          <h2>Pameran Buku</h2>
+          <button id="showEvent">Tampilkan Event</button>
+          <div id="eventDetails" style="display:none;">
+              <p>Pameran Buku akan diadakan pada tanggal 10 Desember 2023 di Aula Perpustakaan.</p>
+              <div class="swiper-container">
+                  <div id="bookList" class="swiper-wrapper"></div>
+                  <!-- Add Pagination -->
+                  <div class="swiper-pagination"></div>
+                  <!-- Add Navigation -->
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+              </div>
+              <style>
+                  .swiper-slide {
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
+                      justify-content: center;
+                      text-align: center;
+                      padding: 20px;
+                      background-color: #f8f9fa;
+                      border-radius: 8px;
+                      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                      transition: transform 0.3s;
+                  }
+                  .swiper-slide img {
+                      width: 150px;
+                      height: auto;
+                      margin-bottom: 10px;
+                      border-radius: 4px;
+                  }
+                  .swiper-slide:hover {
+                      transform: scale(1.05);
+                  }
+              </style>
+              <script>
+                  let bookCollection = [
+                      { title: "Dalam rangka itu, ia menceritakan kisah-kisah inspiratif para peraih medali emas Olimpiade, para CEO terkemuka, dan ilmuwan-ilmuwan istimewa yang telah menggunakan sains tentang kebiasaan-kebiasaan kecil untuk tetap produktif, tetap termotivasi, dan bahagia.", image: "images/1.jpg" },
+                      { title: "Komik ini bercerita tentang Maomao, seorang gadis sederhana yang dibesarkan di kota sederhana oleh ayahnya yang seorang apotekernya. Ia tidak pernah membayangkan bahwa ia akan berhubungan maupun tinggal di istana –hougang sampai dia diculik dan dijual untuk bertugas di sana.", image: "images/2.jpeg" },
+                      { title: " Empat orang yang berteman sejak SMA bekerja di perusahaan yang sama meski beda nasib. Di usia 31 tahun, mereka berburu rumah idaman yang minimal nyerempet Jakarta", image: "images/3.jpg" }
+                  ];
+
+                  // Function to display the book collection
+                  function displayBookCollection() {
+                      let bookList = document.getElementById('bookList');
+                      bookList.innerHTML = ""; // Clear existing content
+
+                      // Create Swiper container
+                      let swiperWrapper = document.createElement('div');
+                      swiperWrapper.className = 'swiper-wrapper';
+
+                      bookCollection.forEach(book => {
+                          let swiperSlide = document.createElement('div');
+                          swiperSlide.className = 'swiper-slide';
+                          swiperSlide.innerHTML = `
+                              <img src="${book.image}" alt="${book.title}">
+                              <p>${book.title}</p>
+                          `;
+                          swiperWrapper.appendChild(swiperSlide);
+                      });
+
+                      // Append Swiper container to bookList
+                      bookList.appendChild(swiperWrapper);
+
+                      // Initialize Swiper
+                      new Swiper('.swiper-container', {
+                          slidesPerView: 3,
+                          spaceBetween: 30,
+                          navigation: {
+                              nextEl: '.swiper-button-next',
+                              prevEl: '.swiper-button-prev',
+                          },
+                          pagination: {
+                              el: '.swiper-pagination',
+                              clickable: true,
+                          },
+                      });
+                  }
+
+                  // Call the function to display books
+                  displayBookCollection();
+              </script>
+          </div>
+          <script>
+              document.getElementById('showEvent').addEventListener('click', function() {
+                  let eventDetails = document.getElementById('eventDetails');
+                  
+                  // Toggle the display of event details
+                  if (eventDetails.style.display === "none") {
+                      eventDetails.style.display = "block";
+                  } else {
+                      eventDetails.style.display = "none";
+                  }
+              });
+          </script>
+    </main>
+    <section class="bg-light text-center py-3" style="margin-top: 40px;">   
+        
+        <footer class="bg-light text-center py-3" style="margin-top: 20px;">
+            <p>Copyright © 2022 — Made with 💛 Perpustakaan Universitas Katolik Santo Thomas</p>
+        </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <div id="dataDisplay"></div>
+    <script>
+        console.log("Data yang ditampilkan");
+    </script>
+    
+</body>
+</html>
